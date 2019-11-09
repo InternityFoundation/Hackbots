@@ -1,0 +1,21 @@
+import tensorflow
+import keras
+import numpy
+from numpy import loadtxt
+from keras.models import Sequential
+from keras.layers import Dense
+dataset = loadtxt('dt_new.csv',delimiter = ',')
+y = dataset[:,0]
+X = dataset[:,1:4]
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size = 0.1)
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(16, input_dim=3, activation='relu'))
+model.add(Dense(12, activation='relu'))
+model.add(Dense(3, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+history = model.fit(X_train, y_train, epochs=100, batch_size=64)
