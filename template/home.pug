@@ -1,0 +1,13 @@
+extend base
+block header
+  header
+   include nav
+   block showcase
+    h1 Happy to Help You!
+    .buttons
+      button.submit Already a User
+    .buttons.button2
+      button.submit
+        | New User
+block content
+  include plans

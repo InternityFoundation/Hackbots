@@ -1,0 +1,38 @@
+form
+ .submit-form
+  fieldset.form-group
+    .row
+      legend.col-form-label.col-sm-2.pt-0 Do you have Diabetes?
+      .col-sm-10
+        .form-check
+          input#own.form-check-input(type='radio' name='gridRadios' value='option1')
+          label.form-check-label(for='own')
+            | Yes
+        .form-check
+          input#own.form-check-input(type='radio' name='gridRadios' value='option2')
+          label.form-check-label(for='own')
+            | No
+   
+        .form-group
+          label(for='age') Your Age?
+          input#age.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='siblings') Number of Siblings
+          input#siblings.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='noofsib') How many of your siblings have diabetes?
+          input#noofsib.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='patno') Number of paternal uncle/aunts?
+          input#patno.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='patnodia') How many of them have diabetes?
+          input#patnodia.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='matno') Number of maternal uncle/aunts?
+          input#matno.form-control(type='text' placeholder='Example answer' required)
+        .form-group
+          label(for='matnodia') How many of them have diabetes?
+          input#matnodia.form-control(type='text' placeholder='Example answer' required)
+        .form__group
+          button.btn.btn-full Submit

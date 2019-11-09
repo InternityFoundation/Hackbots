@@ -1,0 +1,14 @@
+nav
+  ul
+    if user
+      li
+        a(href="/me").img-parent 
+          img(src="img/customer-1.jpg", alt="", srcset="").img_profile
+          //- span #{user.Name}
+      li
+        a(href="#").logout LogOut
+      li
+        a(href="/form").logout Form
+    else
+      li 
+        a(href="/login") Already a User
